@@ -1,0 +1,5 @@
+name: Beavis and Butthead
+description: A Slackbot that doesn't suck. These two juvenile clowns respond to your messages with childish comments.
+avatar: resources/avatar.png
+screenshots:
+ - screenshot: resources/screenshot1.png

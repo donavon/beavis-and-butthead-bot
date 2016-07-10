@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "4.4"
+script:
+  - if [ "$TRAVIS_BRANCH" == "develop" ] ; then npm run build ; else npm run lint && npm test ; fi
+after_success:
+  - git config --global user.name "Travis CI"
+  - git config --global user.email travis-ci@donavon.com
+  - if [ "$TRAVIS_BRANCH" == "develop" ] ; then npm run deploy ; else echo "Skipping push to gh-pages" ; fi
